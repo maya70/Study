@@ -1,0 +1,49 @@
+.frame {
+		background-color: rgba(255, 255, 100, 0.65);
+		color: black;
+		font-size: small;
+		border: 3px solid gray;
+		overflow: hidden;
+		padding: 4px;
+		z-index: 10000;
+		max-height: 60%;
+}
+.frame ul, .frame ol {
+		list-style: inside;
+}
+.frame.pinned {
+		border: 3px solid black;
+		pointer-events: all;
+		overflow-y: auto;
+}
+
+
+.note {
+		background-color: rgba(255, 255, 100, 0.65);
+		color: black;
+		font-size: small;
+		overflow: hidden;
+		padding: 1px;
+		z-index: 10000;
+		max-height: 100%;
+}
+
+
+
+.tooltip {
+		fill: #333,
+		font-size: 12px;
+		background: #eee;
+		box-shadow: 0 0 5px #999;
+		position: absolute;
+		z-index: 100000;
+}
+
+
+/* Tables */
+.meter {
+		display: inline-block;
+		float: left;
+		background-color: #00F;
+		margin: 3px 0;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+    <meta charset="UTF-8">
+    <title>PathRings--A web-version of biological data visualization framework</title>
+    <!--Jquery Lib-->
+    <link href="css/ui-lightness/jquery-ui-1.10.4.min.css" rel="stylesheet" type="text/css">
+    <script src="./jqueryLib/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="./jqueryLib/jquery-ui-1.10.4.js" type="text/javascript"></script>
+    <script src="./jqueryLib/jquery.ui.position.js" type="text/javascript"></script>
+    <script src="./jqueryLib/jquery.contextMenu.js" type="text/javascript"></script>
+    <script src="./lib/jquery-cookie/src/jquery.cookie.js" type="text/javascript"></script>
+    <!--Css style-->
+    <link href="css/visualization.css" rel="stylesheet" type="text/css">
+    <link href="./jqueryLib/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
+    <link href="./jqueryLib/jquery-ui-1.10.4.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="css/colorpicker.css" />
+		<link rel="stylesheet" type="text/css" href="css/bubbles.css" />
+    <script type="text/javascript" src="jqueryLib/colorpicker.js"></script>
+
+    <!--<script src="./js/THREEx.FullScreen.js" type="text/javascript"></script>-->
+    <script src="./js/screenfull.js" type="text/javascript"></script>
+    <script src="./d3lib/d3.js" charset="utf-8"></script>
+    <!-- <script src="./d3lib/d3.min.js" charset="utf-8"></script> -->
+    <link rel="stylesheet" type="text/css" href="d3lib/d3-relatedStyle.css" />
+    <link rel=stylesheet href="css/info.css"/>
+		<!-- Enable for intro dialog box. -->
+    <script src="js/info.js"></script>
+    <script src="js/download.js"></script>
+    <script src="./js/PathBubbles.js" type="text/javascript"></script>
+    <script src="js/util.js"></script>
+		<script src="js/Debug.js"></script>
+		<script src="js/Image.js"></script>
+    <script src="./js/Context.js" type="text/javascript"></script>
+    <script src="./js/TickSlider.js" type="text/javascript"></script>
+    <script src="./js/RequestAnimationFrame.js" type="text/javascript"></script>
+    <script src="./js/WindowResize.js" type="text/javascript"></script>
+    <script src="./js/Algorithm.js" type="text/javascript"></script>
+    <script src="./js/Vector2D.js" type="text/javascript"></script>
+    <script src="./js/Object2D.js" type="text/javascript"></script>
+    <script src="./js/HtmlObject.js" type="text/javascript"></script>
+    <script src="./js/HtmlMenu.js" type="text/javascript"></script>
+    <script src="./js/Shape.js" type="text/javascript"></script>
+    <script src="./js/HintBox.js" type="text/javascript"></script>
+    <script src="./js/Scene.js" type="text/javascript"></script>
+    <script src="./js/Frame.js" type="text/javascript"></script>
+    <script src="./js/NoteFrame.js" type="text/javascript"></script>
+    <script src="./js/BubbleBase.js" type="text/javascript"></script>
+    <script src="./js/Bubble/IFrame.js" type="text/javascript"></script>
+    <script src="./js/Bubble/Note.js" type="text/javascript"></script>
+    <script src="./js/Bubble/Force.js" type="text/javascript"></script>
+    <script src="./js/Bubble/ForceContent.js" type="text/javascript"></script>
+    <script src="./js/Bubble/Search.js" type="text/javascript"></script>
+    <script src="./js/Bubble/SearchContent.js" type="text/javascript"></script>
+    <script src="./js/Bubble/Pathway.js" type="text/javascript"></script>
+    <script src="./js/Bubble/PathwayContent.js" type="text/javascript"></script>
+    <script src="./js/Bubble/RandForce.js" type="text/javascript"></script>
+    <script src="./js/Bubble/RandForceContent.js" type="text/javascript"></script>
+    <script src="./js/HtmlNote.js" type="text/javascript"></script>
+    <script src="./js/IFrame.js" type="text/javascript"></script>
+    <script src="./js/PathwayDiagram.js" type="text/javascript"></script>
+    <script src="./js/ForceLayout.js" type="text/javascript"></script>
+    <script src="./js/PathwayForceLayout.js" type="text/javascript"></script>
+    <script src="./js/RandForceLayout.js" type="text/javascript"></script>
+    <script src="./js/ForceView.js" type="text/javascript"></script>
+    <script src="./js/PathwayForceView.js" type="text/javascript"></script>
+    <script src="./js/SoupForceView.js" type="text/javascript"></script>
+        <script src="./js/GraphForceView.js" type="text/javascript"></script>
+        <script src="./js/RandSoupForceView.js" type="text/javascript"></script>
+
+    <script src="./js/SMForceView.js" type="text/javascript"></script>
+    <script src="./js/ForceDisplay.js" type="text/javascript"></script>
+    <script src="./js/ForceShape.js" type="text/javascript"></script>
+    <script src="./js/MirrorForce.js" type="text/javascript"></script>
+    <script src="./js/D3MirrorForce.js" type="text/javascript"></script>
+    <script src="./js/Biomolecule.js" type="text/javascript"></script>
+    <script src="./js/BubbleGroup.js" type="text/javascript"></script>
+    <script src="./js/BubbleLink.js" type="text/javascript"></script>
+    <script src="./js/Canvas.js" type="text/javascript"></script>
+    <script src="./js/MainCanvas.js" type="text/javascript"></script>
+    <script src="./js/OverlayCanvas.js" type="text/javascript"></script>
+    <script src="./js/NavViewBox.js" type="text/javascript"></script>
+    <script src="./js/NavCanvas.js" type="text/javascript"></script>
+    <script src="./js/Progress.js" type="text/javascript"></script>
+    <script src="./js/Text.js" type="text/javascript"></script>
+    <script src="./js/TreeRing.js" type="text/javascript"></script>
+    <script src="./js/ActionButton.js" type="text/javascript"></script>
+    <script src="./js/D3TreeRing.js" type="text/javascript"></script>
+    <script src="./js/Title.js" type="text/javascript"></script>
+    <script src="./js/D3Table.js" type="text/javascript"></script>
+    <script src="./js/Table.js" type="text/javascript"></script>
+    <script src="./js/D3BiPartite.js" type="text/javascript"></script>
+    <script src="./js/BiPartite.js" type="text/javascript"></script>
+    <script src="./js/BubbleView.js" type="text/javascript"></script>
+    <script src="./js/Button.js" type="text/javascript"></script>
+    <script src="./js/Check.js" type="text/javascript"></script>
+    <script src="./js/LocalFileLoader.js" type="text/javascript"></script>
+    <script src="./js/Activation.js" type="text/javascript"></script>
+    <script src="./js/Inhibition.js" type="text/javascript"></script>
+    <script src="./js/Arrow.js" type="text/javascript"></script>
+    <script src="./js/Loader.js" type="text/javascript"></script>
+    <script src="./js/D3.js" type="text/javascript"></script>
+    <script src="./js/D3/Element.js" type="text/javascript"></script>
+    <script src="./js/D3/Checkbox.js" type="text/javascript"></script>
+    <script src="./js/D3/Protein.js" type="text/javascript"></script>
+    <script src="./js/D3/Small.js" type="text/javascript"></script>
+    <script src="./js/D3/Reaction.js" type="text/javascript"></script>
+    <script src="./js/D3/ReactionLink.js" type="text/javascript"></script>
+    <script src="./js/D3/SoupReactionLink.js" type="text/javascript"></script>
+    <script src="./js/D3/Diminished.js" type="text/javascript"></script>
+    <script src="./js/D3/PathwayLabel.js" type="text/javascript"></script>
+    <script src="./js/Save.js" type="text/javascript"></script>
+    <script src="./js/Load.js" type="text/javascript"></script>
+    <script src="./js/main.js" type="text/javascript"></script>
+    <script src="./js/Tooltip.js" type="text/javascript"></script>
+    <script src="./js/rlimsp.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="navigationBar"  >
+			<canvas id="navCanvas" width="4000" height="50" style="position: absolute; margin: 0px;
+																														 top: 0px; bottom: auto; left: 0px; right: 0px; width: auto; z-index: 10000; height: 50px; display: block; visibility: visible;">
+			</canvas>
+		</div>
+		<div id="bubble">
+			<canvas id="bgCanvas" width = '4000' height = '4000' style="position: absolute; margin: 0px; left: 0px; right: 0px; top: 50px; bottom: 0px; height: auto; width: auto; z-index: 0; display: block; visibility: visible;">
+			</canvas>
+			<canvas id="overlayCanvas" width = '4000' height = '4000' style="position: absolute; margin: 0px; left: 0px; right: 0px; top: 50px; bottom: 0px; height: auto; width: auto; z-index: 1; display: block; visibility: visible; pointer-events: none;">
+			</canvas>
+		</div>
+		<div >
+			<svg id="bgsvg" width = '4000' height = '4000' style="position: absolute; margin: 0px; left: 0px; right: 0px; top: 50px; bottom: 0px;
+																														height: auto; width: auto; z-index: 0; display: block; visibility: visible;">
+			</svg>
+		</div>
+	</body>
+</html>
